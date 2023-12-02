@@ -13,7 +13,6 @@ async def get_users():
 @user_router.get("/{id}")
 async def get_user_by_id(id: str):
     return list_serial(collection.find({"_id": ObjectId(id)}))
-    
 
 @user_router.post("/")
 async def post_user(user: User):
